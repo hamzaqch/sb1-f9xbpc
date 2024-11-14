@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Mapbox Automation Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="com.mapbox.automation.utils.TestListener"/>
+    </listeners>
+    
+    <test name="Mapbox Tests - Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.mapbox.automation.runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>
